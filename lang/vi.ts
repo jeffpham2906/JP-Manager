@@ -27,6 +27,8 @@ export default {
   last_month: 'Tháng trước',
   cancel: 'Huỷ',
   apply: 'Áp dụng',
+  Empty: 'Không có dữ liệu',
+  Loading: 'Đang tải',
   // Order
   add_new_order: 'Thêm mới đơn hàng',
   edit_order: 'Chỉnh sửa đơn hàng',

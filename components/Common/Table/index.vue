@@ -3,10 +3,9 @@
     class="w-full border-separate border-spacing-0 overflow-auto scroll-smooth"
   >
     <thead
-      :class="[
-        { 'sticky top-0 z-20 bg-white shadow-md': headerSticky },
-        headerStyle,
-      ]"
+      :class="
+        twMerge(headerSticky && 'sticky top-0 z-20 bg-white', headerStyle)
+      "
     >
       <tr :class="[rowStyle]">
         <template v-for="column in columns" :key="`header-${column.key}`">
@@ -64,6 +63,8 @@
 </template>
 
 <script setup lang="ts">
+import { twMerge } from 'tailwind-merge'
+
 interface TableProps {
   dataSource: any[]
   loading?: boolean

@@ -22,6 +22,8 @@
           :columns="OrderColumn"
           :data-source="orders"
           :loading="isLoading"
+          :header-style="`${headerShadow && 'shadow-md'}`"
+          row-style="hover:bg-gray-100 transition-all"
         >
           <template #header-actions="{ label, cellStyle }">
             <td
@@ -111,8 +113,17 @@ const { isLoading, showLoading, hideLoading } = useLoading()
 const { $toast } = useNuxtApp()
 
 const actionShadow = ref(true)
+const headerShadow = ref(false)
 const handleScroll = (e: Event) => {
   const tableContainerElement = e.target as HTMLElement
+
+  const scrollTop = tableContainerElement.scrollTop
+  if (scrollTop >= 1) {
+    headerShadow.value = true
+  } else {
+    headerShadow.value = false
+  }
+
   const innerWidth = tableContainerElement?.clientWidth || 0
   const width = tableContainerElement?.scrollWidth || 0
   const scrollLeft = tableContainerElement?.scrollLeft || 0

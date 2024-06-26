@@ -26,6 +26,8 @@ export default {
   last_month: 'Last month',
   cancel: 'Cancel',
   apply: 'Apply',
+  Empty: 'Empty',
+  Loading: 'Loading',
   // Order
   add_new_order: 'Add New Order',
   edit_order: 'Edit Order',

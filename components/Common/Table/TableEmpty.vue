@@ -1,7 +1,5 @@
 <template>
-  <div>Empty</div>
+  <div>{{ $t('Empty') }}</div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
