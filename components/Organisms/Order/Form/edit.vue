@@ -2,7 +2,7 @@
   <div class="grow overflow-auto">
     <Form @submit.prevent="onSubmit" class="grid grid-cols-2 gap-3">
       <FormGroup
-        label="Order ID"
+        :label="$t('order_id')"
         required
         v-model="order_id"
         v-bind="orderIdAttrs"
@@ -10,7 +10,7 @@
         :disabled="isLoading"
       ></FormGroup>
       <FormGroup
-        label="Seller SKU"
+        :label="$t('seller_sku')"
         required
         v-model="seller_sku"
         v-bind="sellerSkuAttrs"
@@ -19,7 +19,7 @@
       ></FormGroup>
       <FormGroup
         class="col-start-1 col-end-3"
-        label="Product Name"
+        :label="$t('product_name')"
         required
         v-model="product_name"
         v-bind="productNameAttrs"
@@ -27,7 +27,7 @@
         :disabled="isLoading"
       ></FormGroup>
       <FormGroup
-        label="Variation"
+        :label="$t('variation')"
         required
         v-model="variation"
         v-bind="variationAttrs"
@@ -35,7 +35,7 @@
         :disabled="isLoading"
       ></FormGroup>
       <FormGroup
-        label="Quantity"
+        :label="$t('quantity')"
         required
         v-model="quantity"
         v-bind="quantityAttrs"
@@ -43,14 +43,14 @@
         :disabled="isLoading"
       ></FormGroup>
       <FormGroup
-        label="Buyer Name"
+        :label="$t('buyer_name')"
         v-model="buyer_name"
         v-bind="buyerNameAttrs"
         :error="errors.buyer_name"
         :disabled="isLoading"
       ></FormGroup>
       <FormGroup
-        label="Assigne"
+        :label="$t('assigne')"
         v-model="assigne"
         v-bind="assigneAttrs"
         :error="errors.assigne"
@@ -58,7 +58,7 @@
       ></FormGroup>
       <FormGroup
         class="col-start-1 col-end-3"
-        label="Buyer Message"
+        :label="$t('buyer_message')"
         type="textarea"
         rows="4"
         v-model="buyer_message"
@@ -69,9 +69,11 @@
     </Form>
   </div>
   <div class="flex justify-end gap-3 pt-5">
-    <Button severity="secondary" @click="emit('close')">Cancel</Button>
+    <Button severity="secondary" @click="emit('close')">
+      {{ $t('cancel') }}
+    </Button>
     <Button type="submit" @click="onSubmit" :loading="isLoading">
-      Create
+      {{ $t('create_order') }}
     </Button>
   </div>
 </template>

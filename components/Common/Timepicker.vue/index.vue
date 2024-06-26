@@ -20,14 +20,16 @@
         class="cursor-pointer whitespace-nowrap rounded-md px-2 py-1 transition-all hover:bg-blossom-200 hover:text-blossom-900"
         @click="presetDate && presetDate(pre.value)"
       >
-        {{ pre.label }}
+        {{ $t(pre.label) }}
       </div>
     </template>
     <template #action-row="{ selectDate, closePicker }">
       <div class="flex w-full items-center justify-end gap-2">
-        <Button size="small" text @click="closePicker">Cancel</Button>
+        <Button size="small" text @click="closePicker">
+          {{ $t('cancel') }}
+        </Button>
         <Button size="small" class="select-button" @click="selectDate">
-          Apply
+          {{ $t('apply') }}
         </Button>
       </div>
     </template>

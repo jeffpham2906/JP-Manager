@@ -17,10 +17,10 @@
           />
           <FormGroup
             v-model="password"
-            :label="$t('Password')"
+            label="Password"
             name="password"
             type="password"
-            :placeholder="$t('Enter password')"
+            placeholder="Enter password"
             v-bind="passwordAttrs"
             :error="errors.password"
           />
@@ -32,7 +32,7 @@
             @click="onSubmit"
             :loading="isLoading"
           >
-            {{ $t('Log in') }}
+            {{ $t('login') }}
           </Button>
         </div>
       </Form>
@@ -56,12 +56,12 @@ const { isLoading, showLoading, hideLoading } = useLoading()
 const { errors, handleSubmit, defineField, setFieldError } = useForm({
   validationSchema: object({
     email: string()
-      .required(t('Email is required field'))
-      .min(6, t('At least 6 character'))
-      .email(t('Invalid email')),
+      .required(t('email_is_required'))
+      .min(6, t('min_6_character'))
+      .email(t('invalid') + ' email'),
     password: string()
-      .required(t('Password is required field'))
-      .min(6, t('At least 6 character')),
+      .required(t('password_is_required'))
+      .min(6, t('min_6_character')),
   }),
 })
 
@@ -81,10 +81,9 @@ const onSubmit = handleSubmit(
       return
     }
     hideLoading()
-
     const navigatePath = (route.query?.redirect_uri || '/') as RouteLocationRaw
-    $toast.success(t('Login success'))
-    return navigateTo(navigatePath)
+    await navigateTo(navigatePath)
+    $toast.success(t('login') + t('success'), { position: 'top-center' })
   },
   ({ errors }) => {
     const firstError = Object.keys(errors)[0]

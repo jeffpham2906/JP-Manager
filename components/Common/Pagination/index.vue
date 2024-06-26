@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-between gap-5 overflow-auto">
-    <div class="flex items-center">
+  <div class="flex justify-between gap-5">
+    <div class="flex items-center overflow-auto">
       <Button
         text
         frontIcon="i-material-symbols:arrow-back-ios-rounded"
@@ -16,7 +16,7 @@
         :disabled="!canMoveBack"
         @click="goPre"
       >
-        Pre
+        {{ $t('Pre') }}
       </Button>
       <div class="flex items-center gap-0.5">
         <Button
@@ -36,7 +36,7 @@
         :disabled="!canMoveNext"
         @click="goNext"
       >
-        Next
+        {{ $t('Next') }}
       </Button>
       <Button
         text
@@ -47,7 +47,7 @@
       />
     </div>
     <div class="flex items-center gap-2 text-sm">
-      <span>Show</span>
+      <span>{{ $t('Show') }}</span>
       <SelectMenu v-model="limitSelected" :menu="limitOptions" direction="top">
         <template #default="{ toggleMenu }">
           <div class="rounded-md border px-2 py-1" @click="toggleMenu">
@@ -55,7 +55,7 @@
           </div>
         </template>
       </SelectMenu>
-      <span class="whitespace-nowrap">per page</span>
+      <span class="whitespace-nowrap tablet:hidden">{{ $t('per_page') }}</span>
     </div>
   </div>
 </template>

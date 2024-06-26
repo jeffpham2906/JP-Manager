@@ -9,7 +9,7 @@
       </Button>
     </template>
 
-    <template #header> Add New Order </template>
+    <template #header> {{ $t('add_new_order') }} </template>
     <template #content="{ hideModal }">
       <OrganismsOrderFormCreate @close="hideModal" @on-created="refresh" />
     </template>

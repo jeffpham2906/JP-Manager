@@ -4,7 +4,7 @@
       v-model="search"
       icon="i-material-symbols:search"
       class="w-full min-w-28 max-w-64"
-      placeholder="Search by seller sku"
+      :placeholder="$t('search_by_seller_sku')"
     />
     <TimepickerVue
       v-model="timeRange"

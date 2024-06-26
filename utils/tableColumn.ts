@@ -4,17 +4,18 @@ export interface TableColumn {
   ui?: string
   stickyRight?: boolean
 }
+
 export const OrderColumn = [
-  { label: 'Order ID', key: 'order_id' },
-  { label: 'Seller SKU', key: 'seller_sku' },
-  { label: 'Product Name', key: 'product_name' },
-  { label: 'Variation', key: 'variation' },
-  { label: 'Quantity', key: 'quantity' },
-  { label: 'Created Time', key: 'created_time' },
-  { label: 'Buyer Message', key: 'buyer_message' },
-  { label: 'Buyer Name', key: 'buyer_name' },
-  { label: 'Assigne', key: 'assign_for' },
-  { label: 'Actions', key: 'actions', stickyRight: true },
+  { label: 'order_id', key: 'order_id' },
+  { label: 'seller_sku', key: 'seller_sku' },
+  { label: 'product_name', key: 'product_name' },
+  { label: 'variation', key: 'variation' },
+  { label: 'quantity', key: 'quantity' },
+  { label: 'created_time', key: 'created_time' },
+  { label: 'buyer_message', key: 'buyer_message' },
+  { label: 'buyer_name', key: 'buyer_name' },
+  { label: 'assigne', key: 'assigne' },
+  { label: 'actions', key: 'actions', stickyRight: true },
 ]
 
 export const EmployeeColumn = [

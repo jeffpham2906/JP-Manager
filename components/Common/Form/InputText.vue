@@ -9,6 +9,7 @@
     v-else
     v-model="model"
     v-bind="$attrs"
+    :type="type"
     class="block w-full rounded-md border border-slate-200 px-3 py-2 text-sm shadow-sm placeholder:text-sm focus:outline-none"
   />
 </template>

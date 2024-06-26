@@ -14,7 +14,7 @@
           <span class="mx-1">/</span>
           <NuxtLink :to="bread.path">
             <span class="transition-all hover:text-sky-600">
-              {{ bread.name }}
+              {{ $t(bread.name) }}
             </span>
           </NuxtLink>
         </li>

@@ -9,7 +9,7 @@
       />
     </template>
 
-    <template #header>Edit Order</template>
+    <template #header>{{ $t('edit_order') }}</template>
     <template #content="{ hideModal }">
       <OrganismsOrderFormEdit @close="hideModal" :id="id" @refresh="refresh" />
     </template>

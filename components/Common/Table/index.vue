@@ -13,14 +13,14 @@
           <slot
             :name="`header-${column.key}`"
             @mounted="() => console.log(`header-${column.key}`)"
-            :label="column.label"
+            :label="$t(column.label)"
             :cellStyle="`${cellStyle} ${box && 'border-[0.5px]'} font-medium text-sm`"
           >
             <td
               class="whitespace-nowrap text-sm font-medium"
               :class="[{ 'border-[0.5px]': box }, cellStyle]"
             >
-              {{ column.label }}
+              {{ $t(column.label) }}
             </td>
           </slot>
         </template>

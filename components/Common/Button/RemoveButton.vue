@@ -5,8 +5,12 @@
         <div>
           <h3 class="mb-3">{{ title }}</h3>
           <div class="flex items-center justify-evenly">
-            <Button class="w-20" text @click="handleYesClick">Yes</Button>
-            <Button class="w-20" @click="isDeleteConfirm = false">No</Button>
+            <Button class="w-20" text @click="handleYesClick">
+              {{ $t('Yes') }}
+            </Button>
+            <Button class="w-20" @click="isDeleteConfirm = false">
+              {{ $t('No') }}
+            </Button>
           </div>
         </div>
       </template>
