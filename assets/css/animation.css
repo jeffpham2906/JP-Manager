@@ -1,0 +1,54 @@
+/* Drop animation */
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: all 0.3s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-enter-to,
+.dropdown-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Drop up animation */
+
+.dropup-enter-active,
+.dropup-leave-active {
+  transition: all 0.3s ease;
+}
+
+.dropup-enter-from,
+.dropup-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.dropup-enter-to,
+.dropup-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Overlay transition */
+
+.overlay-enter-active,
+.overlay-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.overlay-enter-from,
+.overlay-leave-to {
+  opacity: 0;
+}
+
+.overlay-enter-to,
+.overlay-leave-from {
+  opacity: 0.3;
+}
